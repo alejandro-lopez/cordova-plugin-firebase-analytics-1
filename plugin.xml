@@ -49,6 +49,23 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 <pod name="Firebase/Analytics" spec="6.30.0"/>
             </pods>
         </podspec>
+        <podspec>
+      <config>
+        <source url="https://cdn.cocoapods.org/"/>
+      </config>
+      <pods>
+        <pod name="Firebase/FirebaseInstanceID" spec="~> 4.6" />
+      </pods>
+    </podspec>
+
+    <podspec>
+      <config>
+        <source url="https://cdn.cocoapods.org/"/>
+      </config>
+      <pods>
+        <pod name="Firebase" spec="6.30.0" />
+      </pods>
+    </podspec>
     </platform>
 
     <platform name="android">
