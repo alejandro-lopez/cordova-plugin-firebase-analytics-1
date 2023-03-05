@@ -54,7 +54,7 @@
 - (void)setCurrentScreen:(CDVInvokedUrlCommand *)command {
     NSString* name = [command.arguments objectAtIndex:0];
 
-    [FIRAnalytics setScreenName:name screenClass:nil];
+    [FIRAnalytics logEventWithName:kFIREventScreenView parameters: @{kFIRParameterScreenName: screenName}];
 
     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
