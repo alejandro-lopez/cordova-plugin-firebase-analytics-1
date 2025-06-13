@@ -42,13 +42,16 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <source-file src="src/ios/FirebaseAnalyticsPlugin.m" />
 
         <podspec>
-            <config>
-                <source url="https://cdn.cocoapods.org/"/>
-            </config>
-            <pods>
-                <pod name="FirebaseAnalytics" spec="11.8.0"/>
-            </pods>
-        </podspec>
+           <config>
+                      <source url="https://cdn.cocoapods.org/"/>
+           </config>
+           <pods use-frameworks="true">
+                      <pod name="FirebaseCore" spec="11.8.0"/>
+                      <pod name="FirebaseCoreExtension" spec="11.8.0"/>
+                      <pod name="FirebaseAuth" spec="11.8.1"/>
+                      <pod name="FirebaseAnalytics" spec="11.8.0"/>
+           </pods>
+           </podspec>
     </platform>
 
     <platform name="android">
